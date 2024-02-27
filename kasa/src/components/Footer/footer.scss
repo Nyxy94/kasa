@@ -1,0 +1,22 @@
+Footer {
+    display: flex;
+    width: 100%;
+    height: 13.0625rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.78475rem;
+    background-color: black;
+    color: #fff;
+    justify-content: center;
+    &__logo {
+      width: 7.625rem;
+      height: 2.46525rem;
+    }
+    &__text {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 142.6%;
+    }
+  }
