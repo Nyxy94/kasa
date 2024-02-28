@@ -1,0 +1,57 @@
+.collapseContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 0px 0px 0px;
+    @media screen and (max-width: 768px) {
+        padding: 25px 0px 0px 0px;
+    }
+    &__banner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: #fff;
+        font-size: 24px;
+        line-height: 142.6%;
+        padding: 11px;
+        background-color: #ff6060;
+        border-radius: 5px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+        }
+    }
+
+    .arrow {
+        transition: transform 0.3s ease-in-out;
+
+        &.open {
+            transform: rotate(-180deg);
+        }
+    }
+}
+
+.collapseContent {
+    background-color: #f6f6f6;
+    color: black;
+    font-size: 16px;
+    padding: 0px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+
+    &.open {
+        max-height: 320px;
+        padding: 16px;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    &__list--li {
+        margin-bottom: 8px;
+    }
+}

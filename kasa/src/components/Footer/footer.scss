@@ -1,14 +1,15 @@
 Footer {
     display: flex;
     width: 100%;
+    max-width: 1440px;
     height: 13.0625rem;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
     gap: 1.78475rem;
     background-color: black;
     color: #fff;
     justify-content: center;
+    margin: 0 auto;
     &__logo {
       width: 7.625rem;
       height: 2.46525rem;
