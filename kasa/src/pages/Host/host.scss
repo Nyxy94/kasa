@@ -12,8 +12,7 @@
 
     &__elements {
         flex: 1 1;
-        max-width: 50%;
-
+    
         @media (max-width: 768px) {
             max-width: inherit;
             width: 100%;
@@ -25,9 +24,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 1rem;
+    padding-bottom: 10px;
+    align-items: center;
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
+        align-items: initial;
+        padding-bottom: 0px;
     }
 }

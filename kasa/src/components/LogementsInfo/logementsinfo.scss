@@ -1,0 +1,54 @@
+.logementsInfo {
+    line-height: 1rem;
+
+    &__title {
+        color: #ff6060;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 51px;
+        margin: 0px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+
+    &__location {
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 10px 0px 20px 0px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+            margin-bottom: 10px;;
+        }
+    }
+
+    &__tagsContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__tags {
+        color: white;
+        padding: 0px 10px;
+        height: 25px;
+        font-weight: 700;
+        background-color: #ff6060;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 768px) {
+            font-size: 0.625rem;
+        }
+
+
+    }
+}

@@ -1,9 +1,9 @@
 .collapseContainer {
     display: flex;
     flex-direction: column;
-    padding: 35px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
     @media screen and (max-width: 768px) {
-        padding: 25px 0px 0px 0px;
+        padding: 18px 0px 0px 0px;
     }
     &__banner {
         display: flex;
@@ -11,10 +11,12 @@
         justify-content: space-between;
         color: #fff;
         font-size: 24px;
+        font-weight: 700;
         line-height: 142.6%;
         padding: 11px;
         background-color: #ff6060;
         border-radius: 5px;
+
 
         @media screen and (max-width: 768px) {
             font-size: 12px;
@@ -23,6 +25,7 @@
 
     .arrow {
         transition: transform 0.3s ease-in-out;
+        cursor: pointer;
 
         &.open {
             transform: rotate(-180deg);

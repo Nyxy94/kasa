@@ -1,4 +1,4 @@
-import "./home.scss"
+
 import Card from "../../components/Card/Card"
 import Banner from "../../components/Banner/Banner.jsx"
 import homeImg from "../../assets/homeImg.png"

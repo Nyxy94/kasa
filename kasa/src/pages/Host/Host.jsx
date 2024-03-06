@@ -1,6 +1,8 @@
 import "./host.scss"
 import Collapse from "../../components/Collapse/Collapse"
 import Carrousel from "../../components/Carrousel/Carrousel"
+import LogementsInfo from "../../components/LogementsInfo/LogementsInfo"
+import HostInfo from "../../components/HostInfo/HostInfo"
 import logements from "../../logements.json"
 import { Navigate, useParams } from "react-router-dom"
 import React from "react"
@@ -23,6 +25,18 @@ function Host() {
             <section>
                 <Carrousel pictures={logement.pictures} />
             </section>
+            <div className="LogementHostContainer">
+                <section>
+                    <LogementsInfo
+                        title={logement.title}
+                        location={logement.location}
+                        tags={logement.tags}
+                    />
+                </section>
+                <section>
+                    <HostInfo logement={logement} />
+                </section>
+            </div>
             <section className="collapse-Container">
                 <div className="collapse-Container__elements">
                     <Collapse title="Description" content={logement.description} />

@@ -1,8 +1,9 @@
 import "./about.scss"
-import Banner from "../../components/Banner/Banner"
+
 import aboutImg from "../../assets/aboutImg.png"
 import about from "../../about.json"
 import Collapse from "../../components/Collapse/Collapse"
+import Banner from "../../components/Banner/Banner"
 
 function About() {
     return (
