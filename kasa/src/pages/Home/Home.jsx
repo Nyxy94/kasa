@@ -1,11 +1,25 @@
-
+import { useState, useEffect } from "react"
 import Card from "../../components/Card/Card"
 import Banner from "../../components/Banner/Banner.jsx"
 import homeImg from "../../assets/homeImg.png"
-import logements from "../../logements.json"
+
+import {logementsData} from "../../Services/LocationServices.jsx"
 
 function Home(){
-    
+  const [logements, setLogements] = useState([]);
+
+  useEffect(() => {
+    const logements = async () => {
+      try {
+        const logements = await logementsData();
+        setLogements(logements);
+      } catch (error) {
+        console.error('Erreur lors de la récupération des données des logements:', error);
+      }
+    };
+
+    logements();
+  }, []);
 return(
     <section>
         <Banner

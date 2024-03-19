@@ -4,23 +4,39 @@ import Carrousel from "../../components/Carrousel/Carrousel"
 import LogementsInfo from "../../components/LogementsInfo/LogementsInfo"
 import HostInfo from "../../components/HostInfo/HostInfo"
 import Error from "../Error/Error"
-import logements from "../../logements.json"
+import { getLogementById} from "../../Services/LocationServices"
 import {  useParams } from "react-router-dom"
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 
 
 function Host() {
     const { id } = useParams()
-
-    const logement = logements.find((element) => element.id === String(id));
+    const [logement, setLogement] = useState({});
+    const [loading, setLoading] = useState(true);
+    useEffect (() => {
+        const getLogement = async () => {
+          try {
+            const logementResponse = await getLogementById(id);
+            setLogement(logementResponse); 
+            console.log(logementResponse)
+            setLoading(false)
+          } catch (error) {
+          alert (error)
+            console.error('Erreur lors de la récupération des données de logement:', error);
+          }
+        };
+    
+        getLogement();
+      }, [id]);
 
     if (!logement) {
         return <Error />
     }
-
-    return (
-        <div>
+if (!loading) {
+return (
+        
+       <div>
             <section>
                 <Carrousel pictures={logement.pictures} />
             </section>
@@ -47,6 +63,8 @@ function Host() {
         </div>
 
     )
+}
+    
 }
 
 export default Host
