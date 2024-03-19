@@ -11,7 +11,6 @@ function About() {
             <div className="aboutContainer__img">
                 <Banner imgSrc={aboutImg} altText="about banner" text="" />
             </div>
-
             <div className="aboutContainer__content">
                 {about.map((item, index) => (
                     <Collapse
@@ -22,9 +21,7 @@ function About() {
                 ))}
             </div>
         </section>
-
     )
-
 }
 
 export default About

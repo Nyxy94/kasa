@@ -11,11 +11,12 @@ import "./app.scss"
 function App() {
   return (
     <Router>
+      
       <div className="container">
         <Header />
         <Routes>
-          <Route path="/about" element={<About />} />
           <Route path="/host/:id" element={<Host />} />
+          <Route path="/about" element={<About />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error />} />
         </Routes>

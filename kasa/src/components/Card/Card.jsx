@@ -12,7 +12,6 @@ function Card({ id, cover, title }) {
       </div>
     </Link>
   )
-
 }
 
 export default Card

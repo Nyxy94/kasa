@@ -3,8 +3,9 @@ import Collapse from "../../components/Collapse/Collapse"
 import Carrousel from "../../components/Carrousel/Carrousel"
 import LogementsInfo from "../../components/LogementsInfo/LogementsInfo"
 import HostInfo from "../../components/HostInfo/HostInfo"
+import Error from "../Error/Error"
 import logements from "../../logements.json"
-import { Navigate, useParams } from "react-router-dom"
+import {  useParams } from "react-router-dom"
 import React from "react"
 
 
@@ -14,10 +15,8 @@ function Host() {
 
     const logement = logements.find((element) => element.id === String(id));
 
-
     if (!logement) {
-
-        return <Navigate to="/error" />
+        return <Error />
     }
 
     return (
